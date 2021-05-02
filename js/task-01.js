@@ -1,22 +1,19 @@
-const navEl = document.querySelectorAll('#categories');
-console.log(navEl);
-const navListEl = document.querySelectorAll('.item ul');
-console.log(navListEl);
 
-// const ArrayLength = navListEl.querySelectorAll('ul');
-// console.log(ArrayLength);
+const navListEl = document.querySelectorAll('.item');
+console.log(`В списке ${navListEl.length} категории.`);
 
-navListEl.forEach( array => 
-//    const navLength  array.map( arg => arg.length ) 
+for (const array of navListEl) {
+    const childElement = array.querySelectorAll('ul li');
+    const navTextEl = array.firstElementChild;
+    
+    // console.log('Категория:', navTextEl.textContent)
 
-    console.log('Заголовки',array));
+    // console.log('Количество элементов:', childElement.length);
+
+    console.log(`Категория: ${navTextEl.textContent}
+Количество элементов: ${ childElement.length}
+    `);}
 
 
-
-
-    const navTextEl = document.querySelectorAll('.item h2 ');
-    console.log(navTextEl);
-
-    navTextEl.forEach(text => 
-
-        console.log('Категория:', text.textContent));
+    
+ 
