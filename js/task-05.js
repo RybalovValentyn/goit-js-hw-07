@@ -7,7 +7,7 @@ console.log(outputText);
 
 inputRefs.addEventListener('input', oninputText);
 
-inputRefs.addEventListener('blur', onInputBlur);
+inputRefs.addEventListener('input', onInputBlur);
 
 function oninputText(event) {
     outputRefs.textContent = event.currentTarget.value;
