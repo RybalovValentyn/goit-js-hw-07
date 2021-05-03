@@ -17,13 +17,15 @@ const productList = document.querySelector('#ingredients')
 //       products.push(titleEl)
 //   };
 
-const products = ingredients.map(product =>{
+const makeProduct = ingredients => {
+    return ingredients.map(product =>{
         const titleEl = document.createElement('li')
     titleEl.textContent = product;
     return titleEl;
-})
+    })
 
-
+};
+const products = makeProduct (ingredients);
   console.log(products);
   productList.append(...products)
 
